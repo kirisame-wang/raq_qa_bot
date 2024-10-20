@@ -7,7 +7,7 @@ authors = ["Yi-Cheng Wang <kirisame.wang@gmail.com>"]
 [tool.poetry.dependencies]
 python = ">=3.8,<3.9.7 || >3.9.7,<4.0"
 runpod = ">=1.7.1"
-streamlit = ">=1.29.0"
+streamlit = "1.29.0"
 
 [build-system]
 requires = ["setuptools>=42"]
