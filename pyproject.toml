@@ -5,5 +5,5 @@ description = ""
 authors = ["Yi-Cheng Wang <kirisame.wang@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.8"
+python = ">=3.8,<4.0"
 runpod = "1.7.1"
