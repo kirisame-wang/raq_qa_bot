@@ -1,6 +1,8 @@
 [tool.poetry]
 name = "chatbot_frontend"
 version = "0.1"
+description = ""
+authors = ["Yi-Cheng Wang <kirisame.wang@gmail.com>"]
 
 [tool.poetry.dependencies]
 runpod = "1.7.1"
