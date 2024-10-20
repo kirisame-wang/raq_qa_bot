@@ -1,10 +1,7 @@
-[project]
+[tool.poetry]
 name = "chatbot_frontend"
 version = "0.1"
-dependencies = [
-   "runpod==1.7.1",
-   "streamlit==1.29.0"
-]
 
-[project.optional-dependencies]
-dev = ["black", "flake8"]
+[tool.poetry.dependencies]
+runpod = "1.7.1"
+streamlit = "1.29.0"
