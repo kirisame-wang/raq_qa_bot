@@ -8,3 +8,7 @@ authors = ["Yi-Cheng Wang <kirisame.wang@gmail.com>"]
 python = ">=3.8,<3.9.7 || >3.9.7,<4.0"
 runpod = "1.7.1"
 streamlit = "1.29.0"
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
