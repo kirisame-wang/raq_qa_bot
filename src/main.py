@@ -6,6 +6,7 @@ import streamlit as st
 
 runpod.api_key = os.getenv("API_KEY")
 endpoint = runpod.Endpoint(os.getenv("ENDPOINT_ID"))
+timeout = int(os.getenv("API_KEY", 60))
 
 with st.sidebar:
     st.header("About")
@@ -92,21 +93,11 @@ if prompt := st.chat_input("What do you want to know?"):
         try:
             output_text = endpoint.run_sync(
                 data,
-                timeout=30,  # Timeout in seconds.
+                timeout=timeout,  # Timeout in seconds.
             )
         except TimeoutError:
             output_text = """An error occurred while processing your message.
             Please try again or rephrase your message."""
-        # response = requests.post(CHATBOT_URL, json=data)
-
-        # if run_request:
-        #     output_text = response.json()["output"]
-        #     # explanation = response.json()["intermediate_steps"]
-        #
-        # else:
-        #     output_text = """An error occurred while processing your message.
-        #     Please try again or rephrase your message."""
-        #     # explanation = output_text
 
     st.chat_message("assistant").markdown(output_text)
     # st.status("How was this generated?", state="complete").info(explanation)
