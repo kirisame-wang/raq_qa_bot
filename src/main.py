@@ -6,7 +6,7 @@ import streamlit as st
 
 runpod.api_key = os.getenv("API_KEY")
 endpoint = runpod.Endpoint(os.getenv("ENDPOINT_ID"))
-timeout = int(os.getenv("API_KEY", 60))
+timeout = int(os.getenv("TIMEOUT", 60))
 
 with st.sidebar:
     st.header("About")
